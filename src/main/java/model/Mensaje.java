@@ -1,4 +1,4 @@
-package modelos;
+package model;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -13,11 +13,17 @@ public class Mensaje {
     public Mensaje(){
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("DD/MM/YYYY HH:mm:ss");
         Date date = new Date();
-
         setIdDispositivo((int) (Math.random() * 500) + 1);
         setFecha(simpleDateFormat.format(date));
         setHumedad((long) (Math.random() * 100) + 1);
         setTemperatura((long) (Math.random() * 50) + 1);
+    }
+
+    public Mensaje(int idDispositivo, Long temperatura, Long humedad, String fecha) {
+        this.idDispositivo = idDispositivo;
+        this.temperatura = temperatura;
+        this.humedad = humedad;
+        this.fecha = fecha;
     }
 
     public int getIdDispositivo() {
