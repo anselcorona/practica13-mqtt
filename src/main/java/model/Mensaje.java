@@ -19,12 +19,7 @@ public class Mensaje {
         setTemperatura((long) (Math.random() * 50) + 1);
     }
 
-    public Mensaje(int idDispositivo, Long temperatura, Long humedad, String fecha) {
-        this.idDispositivo = idDispositivo;
-        this.temperatura = temperatura;
-        this.humedad = humedad;
-        this.fecha = fecha;
-    }
+
 
     public int getIdDispositivo() {
         return idDispositivo;
